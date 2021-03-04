@@ -1,9 +1,9 @@
 <html>
 <head>
+    <link rel="stylesheet" href="">
     <title>Group 3 CW1</title>
 </head>
 <body>
-    
     <style>
         p{
             font-family: Arial, Helvetica, sans-serif;
@@ -11,16 +11,34 @@
         img{
             width: 10em;
         }
+        button{
+            background-color: cornflowerblue;
+            border-style: none;
+            color: white;
+        }
+        button:hover{
+            background-color: lightskyblue;
+        }
+        
+        /* div.lesson{
+            border-width: 2px;
+            border-color: lightblue;
+            border-radius: 10px;
+            border-style:solid;
+            width: 20em;
+        } */
     </style>
- 
+    
     <div id="app">
+
         <div class="lesson">
-            <img src="file.jpg" >
+
                 <p>Subject: {{lesson.subject}}</p>
                 <p>Location: {{lesson.location}}</p>
                 <p>Price: {{lesson.price}}</p>
                 <p>Spaces: {{lesson.spaces}}</p>            
         </div>
+
         <button v-on:click="addToCart" v-if="canAddToCart">Add To Cart</button>
         <button v-else disabled>Add To Cart</button>
 
