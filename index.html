@@ -15,6 +15,9 @@
             background-color: cornflowerblue;
             border-style: none;
             color: white;
+            padding-top: 10px;
+            width: 100px;
+            height: 100px;
         }
         button:hover{
             background-color: lightskyblue;
@@ -34,10 +37,10 @@
 
         <div class="lesson">
 
-                <p>Subject: {{lesson.subject}}</p>
-                <p>Location: {{lesson.location}}</p>
-                <p>Price: {{lesson.price}}</p>
-                <p>Spaces: {{lesson.spaces}}</p>            
+                <p><e>Subject:</e> {{classes.subject}}</p>
+                <p>Location: {{classes.location}}</p>
+                <p>Price: {{classes.price}}</p>
+                <p>Spaces: {{classes.spaces}}</p>            
         </div>
 
         <button v-on:click="addToCart" v-if="canAddToCart">Add To Cart</button>
@@ -50,7 +53,7 @@
         var activities = new Vue({
             el: '#app',
             data: {
-                lesson: {
+                classes: {
                     subject: "Physics",
                     location: "Geneva",
                     price: '£50',
@@ -59,12 +62,12 @@
             },
             methods: {
                 addToCart: function() {
-                    this.lesson.spaces--;
+                    this.classes.spaces--;
                 }
             },
             computed: {
                 canAddToCart: function() {
-                    return this.lesson.spaces > 0;
+                    return this.classes.spaces > 0;
                 }
             }
         });
