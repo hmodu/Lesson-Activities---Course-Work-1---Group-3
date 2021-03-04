@@ -15,9 +15,8 @@
             background-color: cornflowerblue;
             border-style: none;
             color: white;
-            padding-top: 10px;
-            width: 100px;
-            height: 100px;
+            margin-left: 40px;
+            
         }
         button:hover{
             background-color: lightskyblue;
@@ -35,12 +34,12 @@
     
     <div id="app">
 
-        <div class="lesson">
-
-                <p><e>Subject:</e> {{classes.subject}}</p>
-                <p>Location: {{classes.location}}</p>
-                <p>Price: {{classes.price}}</p>
-                <p>Spaces: {{classes.spaces}}</p>            
+        <div align ="centre" class="lesson">
+            <img src="file.jpg" >
+                <p><strong>Subject:</strong> {{classes.subject}}</p>
+                <p><strong>Location:</strong> {{classes.location}}</p>
+                <p><strong>Price:</strong> {{classes.price}}</p>
+                <p><strong>Spaces:</strong> {{classes.spaces}}</p>            
         </div>
 
         <button v-on:click="addToCart" v-if="canAddToCart">Add To Cart</button>
