@@ -56,13 +56,11 @@
                     location: "Geneva",
                     price: '£50',
                     spaces: 7
-                }
-            },
+                } },
             methods: {
                 addToCart: function() {
                     this.classes.spaces--;
-                }
-            },
+                }},
             computed: {
                 canAddToCart: function() {
                     return this.classes.spaces > 0;
